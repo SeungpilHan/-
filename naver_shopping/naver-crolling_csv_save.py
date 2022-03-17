@@ -18,8 +18,13 @@ search = browser.find_element_by_css_selector('input.co_srh_input._input')
 search.click()
 
 # 검색어 입력
-search.send_keys('대용량 제습기')
+search.send_keys('에어렉스 대용량 제습기')
 search.send_keys(Keys.ENTER)
+
+#80개씩 보기
+browser.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div/div[3]/div[1]/div[1]/div/div[2]/div[3]/a').click()
+time.sleep(1)
+browser.find_element_by_xpath('//*[@id="__next"]/div/div[2]/div/div[3]/div[1]/div[1]/div/div[2]/div[3]/ul/li[4]/a').click()
 
 # 스크롤 전 높이
 before_h = browser.execute_script("return window.scrollY")
@@ -55,6 +60,7 @@ for item in items:
     link = item.find_element_by_css_selector(".basicList_title__3P9Q7 > a").get_attribute('href')
     img_src = item.find_element_by_css_selector(".thumbnail_thumb__3Agq6 > img").get_attribute('src')
     print(name, price, link, img_src)
+
     #데이터쓰기
     csvWriter.writerow([name, price, link, img_src])
 
