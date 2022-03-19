@@ -63,6 +63,5 @@ for item in items:
 
     #데이터쓰기
     csvWriter.writerow([name, price, link, img_src])
-
 #파일닫기
 f.close()
