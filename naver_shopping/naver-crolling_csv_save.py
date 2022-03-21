@@ -18,7 +18,7 @@ search = browser.find_element_by_css_selector('input.co_srh_input._input')
 search.click()
 
 # 검색어 입력
-search.send_keys('에어렉스 대용량 제습기')
+search.send_keys('중고 에어컨')
 search.send_keys(Keys.ENTER)
 
 #80개씩 보기
@@ -58,10 +58,12 @@ for item in items:
     except:
         price = "판매중단"
     link = item.find_element_by_css_selector(".basicList_title__3P9Q7 > a").get_attribute('href')
-    img_src = item.find_element_by_css_selector(".thumbnail_thumb__3Agq6 > img").get_attribute('src')
-    print(name, price, link, img_src)
+    #img_src = item.find_element_by_css_selector(".thumbnail_thumb__3Agq6 > img").get_attribute('src')
+    print(name, price, link) #img_src)
 
     #데이터쓰기
-    csvWriter.writerow([name, price, link, img_src])
+    csvWriter.writerow([name, price, link])
+
+    
 #파일닫기
 f.close()
