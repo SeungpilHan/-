@@ -61,7 +61,7 @@ def save():
 #쇼핑몰 리뷰 보기
 d.find_element_by_xpath(shoppingmall_review).click()
 sleep(2)
-        
+    
 #"음질" 관련 리뷰 가져오기
 d.find_element_by_xpath(category1).click() #스크롤 건드리면 안됨
 name_=name[0]  #에어팟 1세대
