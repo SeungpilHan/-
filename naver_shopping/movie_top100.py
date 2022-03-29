@@ -9,6 +9,7 @@ soup = BeautifulSoup(html)
 prodList = soup.find_all("h3", {"class": "jsx-4245974604"})
 print(prodList)
 
+
 movie_titles = [movie.getText() for movie in prodList]
 movies = movie_titles[::-1]
 
