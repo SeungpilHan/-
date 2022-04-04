@@ -9,6 +9,7 @@ browser = webdriver.Chrome(executable_path= '/Users/hanseungpil/VsCode/실무_�
 # 웹사이트 열기
 browser.get('https://www.naver.com')
 
+
 # 쇼핑 메뉴 클릭
 browser.find_element_by_css_selector('a.nav.shop').click()
 time.sleep(2)
