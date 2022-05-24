@@ -57,7 +57,7 @@ def save():
         df1.to_csv('output1.csv', encoding='utf-8-sig', mode='w')
     else:
         df1.to_csv('output1.csv',encoding='utf-8-sig', mode='a',header=False)
-    
+
 #쇼핑몰 리뷰 보기
 d.find_element_by_xpath(shoppingmall_review).click()
 sleep(2)
